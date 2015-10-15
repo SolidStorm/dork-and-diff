@@ -1,0 +1,25 @@
+filetype:config
+filetype:ini
+filetype:env
+filetype:sql
+filetype:php~
+filetype:log
+intitle:"Index of"
+intext:mysql_fetch_array
+intext:mysql
+inurl:_plugin/HQ
+intitle:intranet inurl:intranet
+intext:"/home/"
+intext:"/var/www/"
+intext:"Server Error in ‘/’ Application"
+intext:"Exception Details:"
+intext:"System.Data.SqlClient.SqlException"
+intext:"Fatal error: Uncaught exception"
+intext:"Warning: mysql_fetch_array()"
+intext:"Error: You have an error in your SQL syntax"
+intext:"java.sql.SQLException"
+intext:"Error: SQLExceptionjava.sql.SQLException"
+intext:"unterminated quoted string at or near"
+intext:"at oracle.jdbc."
+intitle:phpinfo "PHP Version"
+
