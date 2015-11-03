@@ -1,8 +1,8 @@
 #!/bin/bash
 
 site=.com
-tempfile=temp.log
-tempfile_csv="${tempfile}.csv"
+tempfile=output/results.log
+resultsfile_csv="${tempfile}.csv"
 filename=dorks/dorks.txt
 WAIT=5
 searchengine="google-ajax-api"
@@ -55,8 +55,7 @@ do
 	################ csv formatting
 	# date|dork|link|searchengine|confirmed|other
 	while IFS='' read -r line || [[ -n "$line" ]]; do
-    		# echo "$currentdate|$dork|$line|$searchengine|-|-|" >> "${tempfile}.csv"
-		echo "$dork|$line|$searchengine|-|-|" >> "${tempfile}.csv"
+    		echo "$currentdate|$dork|$line|$searchengine|-|-|" >> $resultsfile_csv
 	done < "$tempfile"	
 
         echo "[INFO] - Sleeping to avoid lockout"
@@ -64,9 +63,8 @@ do
 
 done < "$filename"
 
+rm -f $tempfile
 
 
-
-sleep 1000
 exit
 
