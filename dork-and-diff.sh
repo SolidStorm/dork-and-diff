@@ -2,9 +2,16 @@
 
 site=.com
 tempfile=temp.log
+tempfile_csv="${tempfile}.csv"
 filename=dorks/dorks.txt
 WAIT=5
+searchengine="google-ajax-api"
+currentdate=`date "+%Y%m%d-%H%M%S"`
+# csv output formatting
+#date|dork|link|searchengine|confirmed|other
+
 mkdir output
+
 
 if [ -z "$1" ]
 then
@@ -43,19 +50,23 @@ while read -r line
 do
         dork="site:$site $line"
 
-        echo "[INFO] - Dorking:$dork"
-        echo "" >> $tempfile
-        #echo "" >> $tempfile
-        echo "-----------------------" >> $tempfile
-        echo "   $dork               " >> $tempfile
-        echo "-----------------------" >> $tempfile
+        curl -A "Mozilla/Firefox" -s --get --data-urlencode "q=$dork" http://ajax.googleapis.com/ajax/services/search/web?v=1.0 | egrep -o "http[^\"]+" | egrep -v "(www.youtube.com)|(google.com)|(/search\?q=cache)" > $tempfile
 
-        curl -A "Mozilla/Firefox" -s --get --data-urlencode "q=$dork" http://ajax.googleapis.com/ajax/services/search/web?v=1.0 | egrep -o "http[^\"]+" | egrep -v "(www.youtube.com)|(google.com)|(/search\?q=cache)" >> $tempfile
+	################ csv formatting
+	# date|dork|link|searchengine|confirmed|other
+	while IFS='' read -r line || [[ -n "$line" ]]; do
+    		# echo "$currentdate|$dork|$line|$searchengine|-|-|" >> "${tempfile}.csv"
+		echo "$dork|$line|$searchengine|-|-|" >> "${tempfile}.csv"
+	done < "$tempfile"	
 
-        echo "" >> $tempfile
-        # echo "$LINKS" | cut -d / -f 3 | cut -d : -f 1 | grep -v "^$"
         echo "[INFO] - Sleeping to avoid lockout"
         sleep $WAIT
 
 done < "$filename"
+
+
+
+
+sleep 1000
+exit
 
