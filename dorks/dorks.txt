@@ -20,3 +20,9 @@ intext:"Error: SQLExceptionjava.sql.SQLException"
 intext:"unterminated quoted string at or near"
 intext:"at oracle.jdbc."
 intitle:phpinfo "PHP Version"
+inurl:/spip.php
+inurl:/wp-content/
+inurl:/wp-content/uploads/ filetype:sql
+inurl:wp-admin/admin-ajax.php inurl:wp-config.php
+inurl:cgi-bin ext:pl intext:"-rwxr-xr-x"
+intext:"powered by joomla"
