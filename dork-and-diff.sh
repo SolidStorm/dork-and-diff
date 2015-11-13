@@ -6,7 +6,8 @@ resultsfile_csv="${tempfile}.csv"
 filename=dorks/dorks.txt
 WAIT=5
 searchengine="google-ajax-api"
-currentdate=`date "+%Y%m%d-%H%M%S"`
+#currentdate=`date "+%Y%m%d-%H%M%S"`
+currentdate=`date "+%s"`
 # csv output formatting
 #date|dork|link|searchengine|confirmed|other
 
@@ -64,7 +65,6 @@ do
 done < "$filename"
 
 rm -f $tempfile
-
 
 exit
 
