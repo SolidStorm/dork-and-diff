@@ -22,9 +22,9 @@ header = ['Mozilla/4.0 (compatible; MSIE 5.0; SunOS 5.10 sun4u; X11)',
           'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.2pre) Gecko/20100207 Ubuntu/9.04 (jaunty) Namoroka/3.6.2pre',
           'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Avant Browser;']       
 
-d0rk = [ 'intitle:index%20of', 'camps']
+d0rk = [ 'intitle:index%20of']
 
-sitearray = [ 'com' ]
+sitearray = [ 'fr', 're']
 
 str_now = str(datetime.datetime.now())
 ts = int(time.time())
@@ -59,7 +59,7 @@ def get(dork, urls, search_engine):
 						# print text
 						#print str_now+"|"+ ts+"|"+dork+"|"+url+"|"+search_engine
 						#datetime|timestamp|dork|url|searchengine|base64(results_of_GET)
-						get_output.write(str_now+"|"+ str(ts)+"|"+dork+"|"+url+"|"+search_engine+"|"+base64.b64encode(text))
+						get_output.write("\n"+str_now+"|"+ str(ts)+"|"+dork+"|"+url+"|"+search_engine+"|"+base64.b64encode(text))
 						
 						text = ""
 						sys.stdout.flush()
@@ -117,4 +117,9 @@ def search(maxc):
 			get(dork, urls, search_engine)
 	print "[INFO] - " + str_now + "- Found URL:" + str(urls)	
      
-search(1)
+print "----------- Starting ---------------"
+print "		"+str_now+"	 "
+search(5)
+print "------------ End -------------------"
+print ""
+
