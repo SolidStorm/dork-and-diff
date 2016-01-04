@@ -24,7 +24,7 @@ header = ['Mozilla/4.0 (compatible; MSIE 5.0; SunOS 5.10 sun4u; X11)',
 
 d0rk = [ 'intitle:index%20of']
 
-sitearray = [ 'fr', 're']
+sitearray = [ 'com', 'ru', 'cn', 'au']
 
 str_now = str(datetime.datetime.now())
 ts = int(time.time())
