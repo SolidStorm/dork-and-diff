@@ -1,0 +1,45 @@
+# foothold
+https://www.exploit-db.com/google-hacking-database/1/
+
+# Files containing usernames
+https://www.exploit-db.com/google-hacking-database/2/
+
+# Sensitive directories
+https://www.exploit-db.com/google-hacking-database/3/
+
+# Web Server Detection
+https://www.exploit-db.com/google-hacking-database/4/
+
+
+# Vulnerable Files 
+https://www.exploit-db.com/google-hacking-database/5/
+
+# Vulnerable Servers 
+https://www.exploit-db.com/google-hacking-database/6/
+
+# Error Messages
+https://www.exploit-db.com/google-hacking-database/7/
+
+# Files containing juicy info
+https://www.exploit-db.com/google-hacking-database/8/
+
+# Files containing passwords
+https://www.exploit-db.com/google-hacking-database/9/
+
+# Sensitive Online Shopping Info
+https://www.exploit-db.com/google-hacking-database/10/
+
+# Network or vulnerability data
+https://www.exploit-db.com/google-hacking-database/11/
+
+# Pages containing login portals
+https://www.exploit-db.com/google-hacking-database/12/
+
+# Various Online Devices
+"https://www.exploit-db.com/google-hacking-database/13/";
+
+# Advisories and Vulnerabilities
+https://www.exploit-db.com/google-hacking-database/14/
+
+#curl -A "GHDB-WS/0.1"
+#sleep 60
