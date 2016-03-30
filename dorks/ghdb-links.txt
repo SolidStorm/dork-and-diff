@@ -1,45 +1,67 @@
+
+curl -A "GHDB-WS/0.1" https://www.exploit-db.com/google-hacking-database/6/
+sleep 60
+
 # foothold
+# Examples of queries that can help a hacker gain a foothold into a web server
 https://www.exploit-db.com/google-hacking-database/1/
 
 # Files containing usernames
+# These files contain usernames, but no passwords... Still, google finding usernames on a web site..
 https://www.exploit-db.com/google-hacking-database/2/
 
 # Sensitive directories
+# Google's collection of web sites sharing sensitive directories. The files contained in here will vary from sesitive to uber-secret!
 https://www.exploit-db.com/google-hacking-database/3/
 
 # Web Server Detection
+# These links demonstrate Google's awesome ability to profile web servers..
 https://www.exploit-db.com/google-hacking-database/4/
 
-
 # Vulnerable Files 
+#HUNDREDS of vulnerable files that Google can find on websites...
 https://www.exploit-db.com/google-hacking-database/5/
 
 # Vulnerable Servers 
+# These searches reveal servers with specific vulnerabilities. These are found in a different way than the searches found in the "Vulnerable Files" section.
 https://www.exploit-db.com/google-hacking-database/6/
 
 # Error Messages
+# Really retarded error messages that say WAY too much!
 https://www.exploit-db.com/google-hacking-database/7/
 
 # Files containing juicy info
+# No usernames or passwords, but interesting stuff none the less.
 https://www.exploit-db.com/google-hacking-database/8/
 
 # Files containing passwords
+# PASSWORDS, for the LOVE OF GOD!!! Google found PASSWORDS!
 https://www.exploit-db.com/google-hacking-database/9/
 
 # Sensitive Online Shopping Info
+# Examples of queries that can reveal online shopping info like customer data, suppliers, orders, creditcard numbers, credit card info, etc
 https://www.exploit-db.com/google-hacking-database/10/
 
 # Network or vulnerability data
+# These pages contain such things as firewall logs, honeypot logs, network information, IDS logs... all sorts of fun stuff!
+
 https://www.exploit-db.com/google-hacking-database/11/
 
 # Pages containing login portals
+# These are login pages for various services. Consider them the front door of a website's more sensitive functions.
 https://www.exploit-db.com/google-hacking-database/12/
 
 # Various Online Devices
+#This category contains things like printers, video cameras, and all sorts of cool things found on the web with Google.
+
+# Web Server Detection
+# These links demonstrate Google's awesome ability to profile web servers..
 "https://www.exploit-db.com/google-hacking-database/13/";
 
 # Advisories and Vulnerabilities
+# These searches locate vulnerable servers. These searches are often generated from various security advisory posts, and in many cases are product or version-specific.
 https://www.exploit-db.com/google-hacking-database/14/
 
-#curl -A "GHDB-WS/0.1"
-#sleep 60
+
+
+
